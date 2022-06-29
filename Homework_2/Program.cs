@@ -3,15 +3,33 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.Write("Введите трёхзначное число: ");
+// Console.Write("Введите трёхзначное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int secondDigit = number / 10 % 10;
+// if(number / 10 <= 9){
+//     Console.WriteLine("Неверное число");
+// }
+// else{
+//     Console.WriteLine("-> " + secondDigit);
+// }
+
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int secondDigit = number / 10 % 10;
+int thirdDigit = number % 10;
 if(number / 10 <= 9){
-    Console.WriteLine("Неверное число");
+    Console.WriteLine("Третьей цифры нет");
 }
 else{
-    Console.WriteLine("-> " + secondDigit);
+    Console.WriteLine("-> " + thirdDigit);
 }
+
+
 
 // Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
 // 78 -> 8 
