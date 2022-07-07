@@ -16,12 +16,15 @@
 // Console.WriteLine($"{number}, {degree} -> {result}");
 
 // Более удобный вариант (как мне кажется)
+
 // Console.Write("Введите число А: ");
 // int number = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введите число B: ");
 // int degree = Convert.ToInt32(Console.ReadLine());
 // int result = Convert.ToInt32(Math.Pow(number, degree));
 // Console.WriteLine($"{number}, {degree} -> {result}");
+
+
 
 
 // Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
