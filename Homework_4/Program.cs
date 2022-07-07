@@ -3,13 +3,25 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.Write("Введите число А: ");
-int number = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число B: ");
-int degree = Convert.ToInt32(Console.ReadLine());
-int result = Convert.ToInt32(Math.Pow(number, degree));
-Console.WriteLine($"{number}, {degree} -> {result}");
+// Вариант с циклом:
+// Console.Write("Введите число А: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число B: ");
+// int degree = Convert.ToInt32(Console.ReadLine());
+// int result = 1;
+// for (int i = 1; i <= degree; i++)
+// {
+//     result = result * number;
+// }
+// Console.WriteLine($"{number}, {degree} -> {result}");
 
+// Более удобный вариант (как мне кажется)
+// Console.Write("Введите число А: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число B: ");
+// int degree = Convert.ToInt32(Console.ReadLine());
+// int result = Convert.ToInt32(Math.Pow(number, degree));
+// Console.WriteLine($"{number}, {degree} -> {result}");
 
 
 // Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -17,19 +29,21 @@ Console.WriteLine($"{number}, {degree} -> {result}");
 // 82 -> 10
 // 9012 -> 12
 
-// // int calculations(int N)
-// // {
-// Console.Write("Введите число N: ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// int surplus = N % 10;
-// while (surplus >= 9)
-// {
-//     surplus = (N - surplus) / 10;
-// }
-
-//     return surplus;
-// }
-// Console.WriteLine(surplus);
+int calculations(int N)
+{
+int surplus = 0;
+int sum = 0;
+while (N != 0)
+{
+    surplus = N % 10;
+    sum = sum + surplus;
+    N = N / 10;
+}
+return sum;
+}
+Console.Write("Введите число N: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Сумма всех цифр -> " + calculations(number));
 
 
 
